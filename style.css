@@ -1,7 +1,7 @@
 :root {
     --primary: #2D4236;
     --secondary: transparent;
-    --tertiary: #8A601E; /* Darkened for accessibility contrast */
+    --tertiary: #8A601E;
     --neutral: transparent;
     --white: transparent;
     --text-dark: #1a2620;
@@ -11,6 +11,11 @@
     --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     --shadow-soft: 0 10px 30px rgba(0,0,0,0.03);
     --shadow-hover: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Force transparency on all sections and backgrounds */
+section, div, footer, nav, .card, .faq-item, .resource-card, .helpline-card {
+    background-color: transparent !important;
 }
 
 * {
