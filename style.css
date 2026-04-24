@@ -21,11 +21,15 @@
 
 html {
     scroll-behavior: smooth;
+    background-image: url('green leaves.svg');
+    background-size: 800px auto;
+    background-attachment: fixed;
+    background-repeat: repeat;
 }
 
 body {
     font-family: var(--font-sans);
-    background-color: var(--secondary);
+    background-color: transparent; /* Allow HTML background to show through */
     color: var(--text-dark);
     line-height: 1.7;
     overflow-x: hidden;
@@ -612,13 +616,6 @@ footer {
 
 .deco-svg {
     display: none !important;
-}
-
-.leaf-decoration {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0; /* Behind content */
-    transition: transform 0.3s ease-out;
 }
 
 /* --- Emergency Section --- */
