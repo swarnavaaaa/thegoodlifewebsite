@@ -1,7 +1,7 @@
 :root {
     --primary: #2D4236;
     --secondary: #D9E3CC;
-    --tertiary: #8A601E; /* Darkened for accessibility contrast */
+    --tertiary: #004D40; /* Updated from orange to dark green */
     --neutral: #F9FBF7;
     --white: #ffffff;
     --card-bg: #C6FACB;
@@ -105,15 +105,15 @@ a {
     border: none;
     cursor: pointer;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(197, 157, 95, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15);
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(197, 157, 95, 0.4);
-    background-color: #b08c52;
+    box-shadow: 0 15px 30px rgba(0, 77, 64, 0.3);
+    background-color: #00695C;
 }
 
 .btn-outline {
