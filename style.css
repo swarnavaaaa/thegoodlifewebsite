@@ -162,6 +162,7 @@ a {
 .section-padding {
     padding: clamp(4rem, 10vw, 10rem) 0;
     position: relative;
+    background: transparent !important;
 }
 
 /* --- Sticky Navbar --- */
@@ -238,7 +239,7 @@ nav.scrolled {
     min-height: 90vh;
     display: flex;
     align-items: center;
-    background: var(--secondary);
+    background: transparent;
     color: var(--primary);
     position: relative;
     overflow: hidden;
@@ -344,10 +345,10 @@ nav.scrolled {
 
 /* --- Cards --- */
 .card {
-    background: var(--secondary);
+    background: white; /* Solid for text readability */
     padding: 4rem 3rem;
     border-radius: 32px;
-    border: 1px solid var(--secondary);
+    border: 1px solid rgba(45, 66, 54, 0.1);
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
     text-align: center;
@@ -557,7 +558,8 @@ nav.scrolled {
 
 /* --- Footer --- */
 footer {
-    background: var(--primary);
+    background: rgba(45, 66, 54, 0.9); /* Semi-transparent primary */
+    backdrop-filter: blur(10px);
     color: white;
     padding: 80px 0 40px;
     border-radius: 100px 100px 0 0;
@@ -620,13 +622,14 @@ footer {
 
 /* --- Emergency Section --- */
 .emergency-section {
-    background: #fdfaf7;
+    background: white; /* Keep as card for text */
     border-radius: 60px;
     padding: 4rem 5rem;
     margin-bottom: 0;
     border: 1px solid var(--secondary);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-soft);
 }
 
 .emergency-header {
