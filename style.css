@@ -625,6 +625,7 @@ footer {
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
     .emergency-section { padding: 2rem 1.5rem; border-radius: 30px; }
+    .emergency-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 /* --- Emergency Section --- */
