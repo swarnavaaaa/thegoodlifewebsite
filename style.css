@@ -45,6 +45,11 @@ p {
     color: var(--text-muted);
 }
 
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -83,6 +88,7 @@ a {
 
 /* --- Global Elements --- */
 .container {
+    width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -598,6 +604,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
     nav { position: relative; padding: 1rem 0; background: var(--white); }
     #home, .section-padding { padding-top: 40px; padding-bottom: 60px; min-height: auto; }
     .nav-content { flex-direction: column; gap: 1rem; }
@@ -609,7 +616,9 @@ footer {
     .about-image { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 30px; }
     .about-badge { position: relative; right: 0; bottom: 0; margin: -30px auto 0; padding: 1rem 1.5rem; border-radius: 20px; width: fit-content; }
     .about-badge span { font-size: 1.5rem; }
-    .hero-content h1 { font-size: 2rem; }
+    .hero-content h1 { font-size: 1.8rem; }
+    .about-grid h2 { font-size: 2.2rem; }
+    .lead { font-size: 1.1rem; }
     .hero-content p { font-size: 0.95rem; margin-left: auto; margin-right: auto; }
     .hero-cta { flex-direction: column; width: 100%; gap: 1rem; }
     .hero-cta .btn { width: 100%; box-sizing: border-box; }
