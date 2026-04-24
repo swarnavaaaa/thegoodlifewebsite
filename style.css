@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: #042104; /* Matches the darkest leaf color to hide seams */
     background-image: url('green leaves.svg');
     background-size: 800px auto;
     background-attachment: fixed;
