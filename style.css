@@ -40,10 +40,10 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url('leaves.jpg');
-    background-size: cover;
+    background-size: 800px auto; /* Better size for scattered leaves */
     background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.15; /* Semi-transparent */
+    background-repeat: repeat;
+    opacity: 0.12; /* Slightly more subtle */
     z-index: -1;
     pointer-events: none;
 }
