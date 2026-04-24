@@ -5,8 +5,8 @@
     --neutral: #F9FBF7;
     --white: #ffffff;
     --card-bg: #C6FACB;
-    --text-dark: #1a2620;
-    --text-muted: #4a5d52;
+    --text-dark: #00ab47;
+    --text-muted: #2d6b41;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -745,4 +745,3 @@ footer {
     .emergency-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .long-heading { white-space: normal; line-height: 1.3; }
 }
-
