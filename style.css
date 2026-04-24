@@ -21,7 +21,11 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #ffffff; /* Solid white base under everything */
+    background-image: url('leaves.jpg');
+    background-size: 800px auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
 }
 
 body {
@@ -31,22 +35,6 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('leaves.jpg');
-    background-size: 800px auto;
-    background-position: center;
-    background-repeat: repeat;
-    opacity: 0.6; /* Higher opacity since it's the main background */
-    z-index: -2;
-    pointer-events: none;
 }
 
 h1, h2, h3, h4 {
