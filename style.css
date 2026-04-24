@@ -614,6 +614,13 @@ footer {
     display: none !important;
 }
 
+.leaf-decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0; /* Behind content */
+    transition: transform 0.3s ease-out;
+}
+
 /* --- Emergency Section --- */
 .emergency-section {
     background: #fdfaf7;
