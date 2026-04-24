@@ -21,11 +21,11 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #042104; /* Matches the darkest leaf color to hide seams */
+    background-color: #042104;
     background-image: url('green leaves.svg');
-    background-size: 800px auto;
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
 body {
