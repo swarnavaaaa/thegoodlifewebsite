@@ -23,23 +23,40 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// FAQ Accordion
-document.querySelectorAll('.faq-question').forEach(btn => {
+// FAQ Accordion Accessibility & Logic
+document.querySelectorAll('.faq-question').forEach((btn, index) => {
+    const answer = btn.nextElementSibling;
+    const isExpanded = btn.parentElement.classList.contains('open');
+    
+    btn.setAttribute('aria-expanded', isExpanded);
+    btn.setAttribute('aria-controls', `faq-answer-${index}`);
+    btn.id = `faq-question-${index}`;
+    if (answer) {
+        answer.id = `faq-answer-${index}`;
+        answer.setAttribute('aria-labelledby', btn.id);
+        answer.setAttribute('role', 'region');
+    }
+
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const isOpen = item.classList.contains('open');
         
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
         
         if (!isOpen) {
             item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
         }
     });
 });
 
 // Floating Particles
 const container = document.getElementById('particles-container');
-if (container) {
+// Disable particles on mobile to improve performance
+if (container && window.innerWidth > 768) {
     const colors = ['#D9E3CC', '#C59D5F', '#2D4236'];
 
     function createParticle() {
@@ -61,7 +78,8 @@ if (container) {
         container.appendChild(particle);
     }
 
-    for(let i=0; i<15; i++) createParticle();
+    // Use a smaller number of particles to ensure good performance
+    for(let i=0; i<10; i++) requestAnimationFrame(createParticle);
 }
 
 // Active Nav Link highlighting

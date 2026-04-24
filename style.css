@@ -1,7 +1,7 @@
 :root {
     --primary: #2D4236;
     --secondary: #D9E3CC;
-    --tertiary: #C59D5F;
+    --tertiary: #8A601E; /* Darkened for accessibility contrast */
     --neutral: #F9FBF7;
     --white: #ffffff;
     --text-dark: #1a2620;
@@ -82,7 +82,7 @@ a {
 
 /* --- Global Elements --- */
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -231,11 +231,6 @@ nav.scrolled {
     width: 100%;
     max-width: 450px;
     height: auto;
-    border-radius: 40px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    padding: 2rem;
 }
 
 .hero-content h1 {
@@ -358,8 +353,8 @@ nav.scrolled {
 /* --- About Section --- */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
 }
 
@@ -602,9 +597,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-content h1 { font-size: 3rem; }
-    .hero-cta { flex-direction: column; }
+    nav { position: relative; padding: 1.5rem 0; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    #home { padding-top: 40px; padding-bottom: 60px; min-height: auto; }
+    .nav-content { flex-direction: column; gap: 1.5rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.1rem; margin-left: auto; margin-right: auto; }
+    .hero-cta { flex-direction: column; width: 100%; gap: 1rem; }
+    .hero-cta .btn { width: 100%; box-sizing: border-box; }
     .section-padding { padding: 80px 0; }
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
@@ -614,7 +615,7 @@ footer {
 .emergency-section {
     background: #fdfaf7;
     border-radius: 60px;
-    padding: 5rem;
+    padding: 4rem 5rem;
     margin-bottom: 10rem;
     border: 1px solid var(--secondary);
     position: relative;

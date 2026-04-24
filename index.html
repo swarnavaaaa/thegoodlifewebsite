@@ -17,10 +17,10 @@
 <body>
 
     <!-- Nav -->
-    <nav id="main-nav">
+    <nav id="main-nav" aria-label="Main Navigation">
         <div class="container nav-content">
-            <a href="index.html" class="logo">
-                <img src="good_life_new_logo.png" alt="Good Life Logo">
+            <a href="index.html" class="logo" aria-label="Good Life Home">
+                <img src="good_life_new_logo.png" alt="Good Life Logo" width="160" height="80">
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -32,8 +32,9 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="home">
+    <main id="main-content">
+        <!-- Hero -->
+        <section id="home">
         <div id="particles-container"></div>
 
         <div class="container hero-grid">
@@ -42,12 +43,12 @@
                 <p>Welcome to a space where your healing is the priority. Together, we'll navigate the path to clarity, resilience, and lasting peace.</p>
                 <div class="hero-cta">
                     <a href="about.html" class="btn">Book Your Free Call</a>
-                    <a href="resources.html" class="btn btn-outline">Explore Resources</a>
+                    <a href="about.html" class="btn btn-outline">About Me</a>
                 </div>
             </div>
             <div class="hero-logo-wrapper reveal">
                 <div style="text-align: center;">
-                    <img src="good_life_logo_with_tag.png" alt="Good Life Logo with Tagline">
+                    <img src="good_life_new_logo.png" alt="Good Life Logo" width="1774" height="887">
                     <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--primary); opacity: 0.8; letter-spacing: 1px; text-transform: uppercase; font-weight: 500;">An initiative by Yash Shah</p>
                 </div>
             </div>
@@ -65,21 +66,21 @@
             
             <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
                 <div class="card reveal" style="background-color: var(--secondary); border-color: var(--secondary);">
-                    <div class="card-icon">
+                    <div class="card-icon" aria-hidden="true">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 8v4l3 3"/></svg>
                     </div>
                     <h3>You're Heard</h3>
                     <p>Experience deep, empathetic listening where your feelings are validated and your perspective is honored without judgment.</p>
                 </div>
                 <div class="card reveal" style="background-color: var(--secondary); border-color: var(--secondary);">
-                    <div class="card-icon">
+                    <div class="card-icon" aria-hidden="true">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>You're Safe</h3>
                     <p>A strictly confidential and trauma-informed environment where emotional safety is the foundation of our work together.</p>
                 </div>
                 <div class="card reveal" style="background-color: var(--secondary); border-color: var(--secondary);">
-                    <div class="card-icon">
+                    <div class="card-icon" aria-hidden="true">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                     </div>
                     <h3>You Grow</h3>
@@ -115,6 +116,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -123,12 +125,12 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <div class="footer-logo" style="display: inline-block; margin-bottom: 1.5rem;">
-                        <img src="good_life_new_logo.png" alt="Good Life Logo" style="height: 80px; width: auto; display: block;">
+                        <img src="good_life_new_logo.png" alt="Good Life Logo" width="160" height="80" loading="lazy" style="height: 80px; width: auto; display: block;">
                     </div>
                     <p style="color: rgba(255,255,255,0.6); max-width: 300px; font-size: 1rem;">Nurturing your mental health with compassion, expertise, and a commitment to your authentic growth.</p>
                 </div>
                 <div class="footer-column">
-                    <h4>Navigation</h4>
+                    <h2 style="color: var(--secondary); font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 2rem;">Navigation</h2>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -137,7 +139,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Connect</h4>
+                    <h2 style="color: var(--secondary); font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 2rem;">Connect</h2>
                     <ul class="footer-links">
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">LinkedIn</a></li>
@@ -145,7 +147,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Contact</h4>
+                    <h2 style="color: var(--secondary); font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 2rem;">Contact</h2>
                     <ul class="footer-links">
                         <li><span style="color: rgba(255,255,255,0.7);">123 Serenity Way, Suite 400<br>Portland, OR 97201</span></li>
                         <li><a href="mailto:hello@therareflect.com">hello@therareflect.com</a></li>
