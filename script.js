@@ -63,27 +63,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }
 });
 
-// Subtle Decorative Leaves Scattering
+// Enhanced Decorative Leaves Scattering
 function initLeaves() {
-    // Using the primary color as requested, with very low opacity for subtlety
-    const leafColor = 'var(--primary)'; 
+    // A palette of rich, natural greens to make them look "greener"
+    const leafColors = ['#2D4236', '#4A6741', '#6B8E23', '#556B2F', '#455A4F', '#00C853'];
     const leafPaths = [
         "M50,0 C70,20 90,50 90,75 C90,95 72,100 50,100 C28,100 10,95 10,75 C10,50 30,20 50,0 Z", // Classic Leaf
         "M50,2 C50,2 90,30 90,60 C90,80 70,100 50,100 C30,100 10,80 10,60 C10,30 50,2 50,2 Z", // Tear-drop Leaf
-        "M50,0 C80,10 100,40 100,70 C100,90 80,100 50,100 C20,100 0,90 0,70 C0,40 20,10 50,0 Z" // Wide Leaf
+        "M50,0 C80,10 100,40 100,70 C100,90 80,100 50,100 C20,100 0,90 0,70 C0,40 20,10 50,0 Z", // Wide Leaf
+        "M50,5 C65,20 85,45 85,70 C85,90 70,100 50,100 C30,100 15,90 15,70 C15,45 35,20 50,5 Z", // Pointy Oval
+        "M50,0 Q70,25 90,50 Q70,75 50,100 Q30,75 10,50 Q30,25 50,0" // Simple Diamond Leaf
     ];
     
-    // Create 30-40 leaves for a scattered look across the whole page
-    const leafCount = 30 + Math.floor(Math.random() * 11); 
+    // Increased count for a more lush feel (80-100 leaves)
+    const leafCount = 80 + Math.floor(Math.random() * 21); 
     const bodyHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, window.innerHeight);
     
     for (let i = 0; i < leafCount; i++) {
         const leaf = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
         
-        const size = 60 + Math.random() * 100; // 60px to 160px for elegant look
+        const size = 40 + Math.random() * 120; // 40px to 160px
         const rotation = Math.random() * 360; 
-        const opacity = 0.03 + Math.random() * 0.05; // Extremely subtle (3% to 8%) as in reference
+        const color = leafColors[Math.floor(Math.random() * leafColors.length)];
+        // Slightly higher opacity for "greener" look, but still subtle
+        const opacity = 0.04 + Math.random() * 0.08; 
         
         const posX = Math.random() * 100; 
         const posY = Math.random() * bodyHeight; 
@@ -97,7 +101,11 @@ function initLeaves() {
         leaf.style.top = `${posY}px`;
         leaf.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
         leaf.style.opacity = opacity;
-        leaf.style.fill = leafColor;
+        leaf.style.fill = color;
+        // Random blur for depth
+        if (Math.random() > 0.7) {
+            leaf.style.filter = `blur(${Math.random() * 2}px)`;
+        }
         
         path.setAttribute("d", leafPaths[Math.floor(Math.random() * leafPaths.length)]);
         leaf.appendChild(path);
