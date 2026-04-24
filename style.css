@@ -1,9 +1,9 @@
 :root {
     --primary: #2D4236;
-    --secondary: transparent;
-    --tertiary: #8A601E;
-    --neutral: transparent;
-    --white: transparent;
+    --secondary: #D9E3CC;
+    --tertiary: #8A601E; /* Darkened for accessibility contrast */
+    --neutral: #F9FBF7;
+    --white: #ffffff;
     --text-dark: #1a2620;
     --text-muted: #4a5d52;
     --font-serif: 'Playfair Display', serif;
@@ -11,11 +11,6 @@
     --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     --shadow-soft: 0 10px 30px rgba(0,0,0,0.03);
     --shadow-hover: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-/* Force transparency on all sections and backgrounds */
-section, div, footer, nav, .card, .faq-item, .resource-card, .helpline-card {
-    background-color: transparent !important;
 }
 
 * {
@@ -26,20 +21,14 @@ section, div, footer, nav, .card, .faq-item, .resource-card, .helpline-card {
 
 html {
     scroll-behavior: smooth;
-    background-image: url('leaves.jpg');
-    background-size: 800px auto;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat;
 }
 
 body {
     font-family: var(--font-sans);
-    background-color: transparent;
+    background-color: var(--secondary);
     color: var(--text-dark);
     line-height: 1.7;
     overflow-x: hidden;
-    position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -118,7 +107,7 @@ a {
 .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(197, 157, 95, 0.4);
-    background-color: #1a2b22; /* Darker version of primary */
+    background-color: #b08c52;
 }
 
 .btn-outline {
@@ -179,11 +168,11 @@ nav {
     z-index: 1000;
     padding: 0.8rem 0;
     transition: var(--transition);
-    background: transparent;
+    background: white;
 }
 
 nav.scrolled {
-    background: rgba(255, 255, 255, 0.4); /* Very light glass effect */
+    background: rgba(217, 227, 204, 0.8);
     backdrop-filter: blur(20px);
     padding: 1.2rem 0;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
@@ -364,7 +353,7 @@ nav.scrolled {
 .card:hover {
     transform: translateY(-12px);
     box-shadow: var(--shadow-hover);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .card-icon {
@@ -564,7 +553,7 @@ nav.scrolled {
 
 /* --- Footer --- */
 footer {
-    background: rgba(45, 66, 54, 0.8); /* Semi-transparent primary green */
+    background: var(--primary);
     color: white;
     padding: 80px 0 40px;
     border-radius: 100px 100px 0 0;
@@ -627,7 +616,7 @@ footer {
 
 /* --- Emergency Section --- */
 .emergency-section {
-    background: transparent;
+    background: #fdfaf7;
     border-radius: 60px;
     padding: 4rem 5rem;
     margin-bottom: 0;
