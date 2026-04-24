@@ -125,7 +125,7 @@ a {
 .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(197, 157, 95, 0.4);
-    background-color: #b08c52;
+    background-color: #1a2b22; /* Darker version of primary */
 }
 
 .btn-outline {
@@ -186,7 +186,7 @@ nav {
     z-index: 1000;
     padding: 0.8rem 0;
     transition: var(--transition);
-    background: white;
+    background: transparent;
 }
 
 nav.scrolled {
@@ -571,7 +571,7 @@ nav.scrolled {
 
 /* --- Footer --- */
 footer {
-    background: var(--primary);
+    background: rgba(45, 66, 54, 0.8); /* Semi-transparent primary green */
     color: white;
     padding: 80px 0 40px;
     border-radius: 100px 100px 0 0;
