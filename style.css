@@ -4,6 +4,7 @@
     --tertiary: #8A601E; /* Darkened for accessibility contrast */
     --neutral: #F9FBF7;
     --white: #ffffff;
+    --card-bg: #C6FACB;
     --text-dark: #1a2620;
     --text-muted: #4a5d52;
     --font-serif: 'Playfair Display', serif;
@@ -345,7 +346,7 @@ nav.scrolled {
 
 /* --- Cards --- */
 .card {
-    background: var(--secondary);
+    background: var(--card-bg);
     padding: 4rem 3rem;
     border-radius: 32px;
     border: 1px solid var(--secondary);
@@ -452,7 +453,7 @@ nav.scrolled {
 .faq-item {
     margin-bottom: 1.5rem;
     border-radius: 20px;
-    background: var(--white);
+    background: var(--card-bg);
     border: 1px solid rgba(217, 227, 204, 0.5);
     overflow: hidden;
     transition: var(--transition);
@@ -511,7 +512,7 @@ nav.scrolled {
 
 /* --- Resources --- */
 .resource-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 3rem;
     border-radius: 30px;
     transition: var(--transition);
@@ -621,7 +622,7 @@ footer {
 
 /* --- Emergency Section --- */
 .emergency-section {
-    background: #fdfaf7;
+    background: var(--card-bg);
     border-radius: 60px;
     padding: 4rem 5rem;
     margin-bottom: 0;
@@ -650,7 +651,7 @@ footer {
 }
 
 .emergency-note {
-    background: var(--white);
+    background: var(--white); /* Keep white for internal note contrast if desired, or change to neutral */
     padding: 2.5rem;
     border-radius: 30px;
     border-left: 6px solid var(--tertiary);
@@ -673,7 +674,7 @@ footer {
 }
 
 .helpline-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 30px;
     box-shadow: var(--shadow-soft);
