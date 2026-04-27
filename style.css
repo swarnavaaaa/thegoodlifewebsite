@@ -53,6 +53,7 @@ p {
     font-weight: 300;
     font-size: 1.1rem;
     color: var(--text-muted);
+    margin-bottom: 1.5rem;
 }
 
 .lead {
