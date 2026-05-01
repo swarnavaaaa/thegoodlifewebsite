@@ -723,6 +723,8 @@ footer {
     .hero-logo-wrapper { order: -1; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
     .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .hide-on-mobile { display: none !important; }
+    .hide-on-desktop { display: block !important; }
 }
 
 @media (max-width: 768px) {
