@@ -766,4 +766,8 @@ footer {
         max-width: 100% !important;
         overflow-wrap: break-word !important;
     }
+    .hide-on-mobile { display: none !important; }
+    .hide-on-desktop { display: block !important; }
 }
+
+.hide-on-desktop { display: none !important; }
