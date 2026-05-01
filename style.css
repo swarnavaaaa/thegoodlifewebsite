@@ -768,6 +768,16 @@ footer {
     }
     .hide-on-mobile { display: none !important; }
     .hide-on-desktop { display: block !important; }
+    .how-i-work-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
 }
 
 .hide-on-desktop { display: none !important; }
+
+.how-i-work-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4.5rem;
+}
