@@ -506,7 +506,7 @@ nav.scrolled {
 }
 
 .faq-item.open .faq-answer {
-    max-height: 1000px;
+    max-height: 2000px;
     padding-bottom: 2rem;
     transition: max-height 0.5s ease-in;
 }
