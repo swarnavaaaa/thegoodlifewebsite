@@ -6,7 +6,7 @@
     --white: #ffffff;
     --card-bg: #C6FACB;
     --text-dark: #111c14;
-    --text-muted: #1e2f23;
+    --text-muted: #111c14;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -50,9 +50,9 @@ h2 { font-size: clamp(1.8rem, 6vw, 3rem); }
 h3 { font-size: clamp(1.4rem, 4vw, 2rem); }
 
 p {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
